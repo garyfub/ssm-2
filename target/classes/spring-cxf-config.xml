@@ -9,7 +9,6 @@
     <import resource="classpath:META-INF/cxf/cxf.xml"/>
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
-
     <jaxws:endpoint id="helloWorld" implementor="com.ssm.webservice.impl.HelloWorldImpl" address="/HelloWorld"/>
 </beans>
         <!-- END SNIPPET: beans -->

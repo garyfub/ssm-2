@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
 import com.ssm.pojo.User;
 import com.ssm.service.IUserService;
 
@@ -19,14 +20,18 @@ public class TestMyBatis {
     private static Logger logger = Logger.getLogger(TestMyBatis.class);
     
     @Resource
-    private IUserService userService = null;
-    
-    
+    private IUserService userService ;
+
     @Test
     public void test() {
         User user = userService.getUserById(1);
-        // System.out.println(user.getUserName());
+        System.out.println(user.getUserName());
         logger.info(JSON.toJSONString(user));
     }
     
+    
+    @Test
+    public void testPageHelper() {
+    	  PageHelper.startPage(1, 10);
+    }
 }

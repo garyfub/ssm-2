@@ -1,8 +1,12 @@
 package com.ssm.service;
 
+import java.util.List;
+
 import com.ssm.pojo.User;
 
 public interface IUserService {
 	
-	 public User getUserById(int userId);
+	  User getUserById(int userId);
+	  
+	  List<User> getUserList();
 }

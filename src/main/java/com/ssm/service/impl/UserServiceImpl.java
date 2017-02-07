@@ -1,5 +1,7 @@
 package com.ssm.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -16,6 +18,13 @@ public class UserServiceImpl implements IUserService {
         return this.userDao.selectByPrimaryKey(userId);
     }
     
+
+	@Override
+	public List<User> getUserList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	@Resource
     private UserMapper userDao;
 
