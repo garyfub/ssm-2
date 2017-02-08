@@ -13,19 +13,18 @@ import com.ssm.service.IUserService;
 @Service("userService")
 public class UserServiceImpl implements IUserService {
 
-
     public User getUserById(int userId) {
         return this.userDao.selectByPrimaryKey(userId);
     }
-    
 
 	@Override
-	public List<User> getUserList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<User> findUserAll() {
+		
+		return this.userDao.selectUserList();
 	}
-	
+
 	@Resource
     private UserMapper userDao;
+
 
 }

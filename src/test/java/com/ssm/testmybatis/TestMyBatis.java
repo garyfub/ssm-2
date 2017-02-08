@@ -1,5 +1,7 @@
 package com.ssm.testmybatis;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.apache.log4j.Logger;
@@ -10,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.ssm.pojo.User;
 import com.ssm.service.IUserService;
 
@@ -29,9 +32,16 @@ public class TestMyBatis {
         logger.info(JSON.toJSONString(user));
     }
     
-    
     @Test
-    public void testPageHelper() {
+    public void testPageHelperList() {
+    	
     	  PageHelper.startPage(1, 10);
+    	  List<User> userList = userService.findUserAll();
+    	  PageInfo<User>  info = new PageInfo<>(userService.findUserAll());
+    	  System.out.println(info);
+    	  for (User user : userList) {
+			System.out.println(user.getUserName());
+		}
+    	  System.out.println("size:"+userList.size());
     }
 }

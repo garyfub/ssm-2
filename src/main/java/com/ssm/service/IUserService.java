@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.ssm.pojo.User;
 
-public interface IUserService {
+public interface IUserService{
 	
 	  User getUserById(int userId);
 	  
-	  List<User> getUserList();
+	  List<User> findUserAll();
 }
