@@ -1,12 +1,12 @@
 package com.ssm.service;
 
-import java.util.List;
-
+import com.github.pagehelper.PageInfo;
 import com.ssm.pojo.User;
+import com.ssm.pojo.util.PageBean;
 
 public interface IUserService{
 	
 	  User getUserById(int userId);
 	  
-	  List<User> findUserAll();
+	  PageInfo<User> findUserAll(PageBean pageBean);
 }

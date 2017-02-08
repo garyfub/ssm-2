@@ -34,7 +34,7 @@ public class TestMyBatis {
     
     @Test
     public void testPageHelperList() {
-    	
+    	/*
     	  PageHelper.startPage(1, 10);
     	  List<User> userList = userService.findUserAll();
     	  PageInfo<User>  info = new PageInfo<>(userService.findUserAll());
@@ -42,6 +42,6 @@ public class TestMyBatis {
     	  for (User user : userList) {
 			System.out.println(user.getUserName());
 		}
-    	  System.out.println("size:"+userList.size());
+    	  System.out.println("size:"+userList.size());*/
     }
 }

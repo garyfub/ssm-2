@@ -1,7 +1,12 @@
 package com.ssm.pojo;
 
-public class User {
-    private Integer id;
+public class User implements java.io.Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 5234688951381881916L;
+
+	private Integer id;
 
     private String userName;
 

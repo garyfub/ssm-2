@@ -1,9 +1,14 @@
 package com.ssm.webservice.impl;
 
-import com.ssm.pojo.util.PageBean;
-import com.ssm.pojo.util.PageData;
-import com.ssm.webservice.IHelloWorld;
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.PageInfo;
+import com.ssm.pojo.User;
+import com.ssm.pojo.util.PageBean;
+import com.ssm.service.IUserService;
+import com.ssm.webservice.IHelloWorld;
 
 /**
  * Created by Administrator on 2017/1/23.
@@ -17,10 +22,14 @@ public class HelloWorldImpl implements IHelloWorld {
     	
         return "hello world!"+message;
     }
-
+    
 	@Override
-	public PageData showPageUser(PageBean pageBean) {
+	public PageInfo<User> showPageUser(PageBean pageBean) {
 		
-		return null;
+		return userService.findUserAll(pageBean);
 	}
+	
+	 @Resource
+	 private IUserService userService ;
+
 }
