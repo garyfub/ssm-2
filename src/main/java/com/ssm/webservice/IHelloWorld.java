@@ -4,6 +4,8 @@ import javax.jws.WebService;
 
 import com.github.pagehelper.PageInfo;
 import com.ssm.pojo.User;
+import com.ssm.pojo.exception.FileTransferException;
+import com.ssm.pojo.util.MyFile;
 import com.ssm.pojo.util.PageBean;
 
 /**
@@ -15,4 +17,7 @@ public interface IHelloWorld {
     public String sayHello(String message);
     
     public PageInfo<User> showPageUser(PageBean pageBean);
+    
+    MyFile downloadFile(MyFile myFile) throws FileTransferException;  
+
 }
