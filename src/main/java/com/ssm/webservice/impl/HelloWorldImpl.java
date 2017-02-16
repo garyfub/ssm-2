@@ -32,9 +32,9 @@ public class HelloWorldImpl implements IHelloWorld {
     }
     
 	@Override
-	public PageInfo<User> showPageUser(PageBean pageBean) {
+	public PageInfo<User> showPageUser(PageBean pageBean,String userName) {
 		
-		return userService.findUserAll(pageBean);
+		return userService.findUserAll(pageBean,userName);
 	}
 	
 

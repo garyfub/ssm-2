@@ -19,9 +19,9 @@ public class UserServiceImpl implements IUserService {
     }
 
 	@Override
-	public PageInfo<User> findUserAll(PageBean pageBean) {
+	public PageInfo<User> findUserAll(PageBean pageBean,String userName) {
 		PageHelper.startPage(pageBean.getPage(), pageBean.getRows());
-		PageInfo<User>  info = new PageInfo<>(userDao.selectUserList());
+		PageInfo<User>  info = new PageInfo<>(userDao.selectUserList(userName));
 		return info;
 	}
 

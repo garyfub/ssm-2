@@ -16,7 +16,7 @@ public interface IHelloWorld {
 	
     public String sayHello(String message);
     
-    public PageInfo<User> showPageUser(PageBean pageBean);
+    public PageInfo<User> showPageUser(PageBean pageBean,String userName);
     
     MyFile downloadFile(MyFile myFile) throws FileTransferException;  
 

@@ -8,5 +8,5 @@ public interface IUserService{
 	
 	  User getUserById(int userId);
 	  
-	  PageInfo<User> findUserAll(PageBean pageBean);
+	  PageInfo<User> findUserAll(PageBean pageBean,String userName);
 }

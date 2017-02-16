@@ -16,11 +16,12 @@
     from user_t
     where id = #{id,jdbcType=INTEGER}
   </select>
-  
-    <select id="selectUserList" resultMap="BaseResultMap" >
+  	
+    <select id="selectUserList" resultMap="BaseResultMap" parameterType="java.lang.String">
     select 
     <include refid="Base_Column_List" />
-    from user_t
+    from user_t 
+    where user_name = #{0}
   </select>
   
   
