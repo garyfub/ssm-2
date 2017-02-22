@@ -21,7 +21,8 @@
     select 
     <include refid="Base_Column_List" />
     from user_t 
-    where user_name = #{0}
+    where user_name like
+    concat(concat('%',#{0}),'%')
   </select>
   
   
